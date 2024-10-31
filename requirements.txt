@@ -1,0 +1,14 @@
+bcrypt==4.1.2
+celery==5.3.6
+Django==4.2.10
+django-cors-headers==4.6.0  # https://github.com/adamchainz/django-cors-headers
+django-datatables-view==1.18.0
+django-environ==0.11.2
+djangorestframework==3.15.2  # https://github.com/encode/django-rest-framework
+djangorestframework-simplejwt==5.3.1
+gunicorn==20.1.0
+pillow==10.1.0
+pre-commit==4.0.1  # https://github.com/pre-commit/pre-commit
+psycopg2==2.9.9
+redis==5.0.1
+requests==2.24.0
