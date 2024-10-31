@@ -1,10 +1,10 @@
 from django.contrib.auth import authenticate
 from rest_framework import status
 from rest_framework.permissions import AllowAny
-from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from src.exceptions.sign_in_validation_error import SignInValidationError
+from src.libraries.response import Response
 from src.serializers.user import ReadUserSerializer
 from src.services.token_service import TokenService
 
@@ -26,12 +26,10 @@ class SignInView(APIView):
 
         return Response(
             data={
-                "data": {
-                    "token": self.token_service.get_access_token(user),
-                    "user": ReadUserSerializer(
-                        user,
-                    ).data,
-                },
+                "token": self.token_service.get_access_token(user),
+                "user": ReadUserSerializer(
+                    user,
+                ).data,
             },
             status=status.HTTP_200_OK,
         )
