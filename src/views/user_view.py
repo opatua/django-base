@@ -3,7 +3,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 
 from src.models import User
-from src.serializers.user import UserSerializer
+from src.serializers.user_serializer import UserSerializer
 
 
 class UserView(ModelViewSet):

@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 
 from src.exceptions.sign_in_validation_error import SignInValidationError
 from src.libraries.response import Response
-from src.serializers.user import ReadUserSerializer
+from src.serializers.user_serializer import ReadUserSerializer
 from src.services.token_service import TokenService
 
 
